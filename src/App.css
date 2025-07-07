@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: #222831;
+  color: #DDDDDD;
+  overflow-x: hidden;
+}
+
+.glow-text {
+  text-shadow: 0 0 20px rgba(240, 84, 84, 0.5);
+}
+
+.glow-border {
+  border: 2px solid rgba(240, 84, 84, 0.3);
+  box-shadow: 0 0 20px rgba(240, 84, 84, 0.2);
+  transition: all 0.3s ease;
+}
+
+.glow-border:hover {
+  border-color: rgba(240, 84, 84, 0.6);
+  box-shadow: 0 0 30px rgba(240, 84, 84, 0.4);
+}
+
+.floating-animation {
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+.wave-animation {
+  animation: wave 2s ease-in-out infinite;
+}
+
+@keyframes wave {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+.slide-in-left {
+  animation: slideInLeft 0.8s ease-out;
+}
+
+.slide-in-right {
+  animation: slideInRight 0.8s ease-out;
+}
+
+@keyframes slideInLeft {
+  from { transform: translateX(-100%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideInRight {
+  from { transform: translateX(100%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+.rotating-bg {
+  animation: rotate 20s linear infinite;
+}
+
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.gradient-text {
+  background: linear-gradient(45deg, #F05454, #30475E);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.typing-cursor {
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+.diamond-icon {
+  width: 20px;
+  height: 20px;
+  background: linear-gradient(45deg, #F05454, #30475E);
+  transform: rotate(45deg);
+  border-radius: 2px;
+}
+
+.card-hover {
+  transition: all 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-5px) scale(1.02);
+}
+
+.wave-pattern {
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23F05454' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+.calendar-page {
+  perspective: 1000px;
+}
+
+.calendar-flip {
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+}
+
+.calendar-flip.flipping {
+  transform: rotateY(180deg);
+}
+
+.project-category-btn {
+  transition: all 0.3s ease;
+  background: #30475E;
+  border: 2px solid transparent;
+}
+
+.project-category-btn:hover {
+  background: #F05454;
+  border-color: #F05454;
+  transform: translateY(-2px);
+}
+
+.project-category-btn.active {
+  background: #F05454;
+  border-color: #F05454;
+}
+
+.studio-ghibli-card {
+  background: linear-gradient(135deg, #30475E 0%, #222831 100%);
+  border: 1px solid rgba(240, 84, 84, 0.2);
+}
+
+.studio-ghibli-card:hover {
+  border-color: rgba(240, 84, 84, 0.5);
+  box-shadow: 0 10px 30px rgba(240, 84, 84, 0.2);
+}
