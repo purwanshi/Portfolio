@@ -13,18 +13,30 @@ const LandingPage = () => {
   ];
 
   return (
-    <div className="min-h-screen pt-16 relative overflow-hidden" style={{ background: '#222831' }}>
+    <div className="min-h-screen pt-16 relative overflow-hidden" 
+         style={{ 
+           background: '#222831',
+           backgroundImage: 'url("https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2025&q=80")',
+           backgroundSize: 'cover',
+           backgroundPosition: 'center',
+           backgroundRepeat: 'no-repeat',
+           backgroundAttachment: 'fixed'
+         }}>
+      
+      {/* Background Overlay */}
+      <div className="absolute inset-0 bg-black bg-opacity-60 z-0"></div>
+      
       {/* Background Animation */}
-      <div className="absolute inset-0 z-0">
+      <div className="absolute inset-0 z-10">
         <div className="absolute top-20 left-20 w-32 h-32 rounded-full rotating-bg" style={{ background: 'rgba(48, 71, 94, 0.2)' }}></div>
         <div className="absolute bottom-20 right-20 w-24 h-24 rounded-full rotating-bg" style={{ background: 'rgba(240, 84, 84, 0.2)', animationDelay: '10s' }}></div>
         <div className="absolute top-1/2 left-1/4 w-16 h-16 rounded-full rotating-bg" style={{ background: 'rgba(48, 71, 94, 0.2)', animationDelay: '5s' }}></div>
       </div>
 
       {/* Wave Pattern */}
-      <div className="absolute inset-0 wave-pattern opacity-10"></div>
+      <div className="absolute inset-0 wave-pattern opacity-10 z-10"></div>
 
-      <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-screen flex items-center">
+      <div className="relative z-20 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-screen flex items-center">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center w-full">
           {/* Left Column - Content */}
           <div className="space-y-8">
