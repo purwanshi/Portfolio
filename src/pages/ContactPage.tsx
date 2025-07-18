@@ -193,6 +193,9 @@ const ContactPage = () => {
             <span className="text-lg font-medium" style={{ color: '#DDDDDD' }}>mishrapurwanshi449@gmail.com</span>
             <Mail style={{ color: '#F05454' }} size={24} />
           </div>
+          <div className="mt-4 inline-flex items-center space-x-4 px-8 py-4 rounded-full glow-border" style={{ background: 'rgba(240, 84, 84, 0.2)' }}>
+            <span className="text-lg font-medium" style={{ color: '#DDDDDD' }}>+91 9571797661</span>
+          </div>
         </div>
       </div>
     </div>

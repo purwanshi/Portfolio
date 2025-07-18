@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Calendar, ChevronLeft, ChevronRight, Building, Clock, BookOpen } from 'lucide-react';
 
 const InternshipsPage = () => {
@@ -11,27 +11,46 @@ const InternshipsPage = () => {
       position: 'Data Analyst Intern',
       company: 'NOQs Digital, Jaipur',
       duration: '1 Month',
-      date: 'Jan 2024',
+      date: 'August 1 - September 30, 2023',
       summary: 'Created dynamic dashboards using Power BI with advanced data visualization techniques.',
       fullDescription: 'Developed comprehensive dashboards using Power BI with advanced features including filters, slicers, charts, and KPIs. Gained extensive expertise in data cleaning, transformation, and visualization techniques. Worked with complex datasets to create meaningful insights for business decision-making.',
       keyLearnings: ['Power BI Dashboard Development', 'Data Visualization', 'KPI Creation', 'Data Cleaning & Transformation'],
       color: 'from-blue-500 to-cyan-500'
     },
     {
-      position: 'AWS Cloud Architect Intern',
+      position: 'AWS Solution Architect Intern',
       company: 'Regex Software Pvt Ltd, Jaipur',
-      duration: '2 Months',
-      date: 'Feb-Mar 2024',
-      summary: 'Architected cloud solutions using AWS services including EC2, Lambda, and VPC.',
+      duration: '1.5 Months',
+      date: 'July 8 - August 23, 2024',
+      summary: 'Architected cloud solutions using AWS services including EC2, Lambda, S3, VPC, IAM etc',
       fullDescription: 'Designed and implemented cloud infrastructure using AWS services including EC2, Lambda, IAM, MFA, VPC, and S3. Developed serverless solutions and explored advanced services like IoT, Machine Learning, SNS, and CloudWatch. Built scalable and secure cloud architectures following AWS best practices.',
-      keyLearnings: ['AWS Cloud Architecture', 'Serverless Computing', 'Security Implementation', 'Infrastructure as Code'],
+              keyLearnings: ['AWS Cloud Architecture', 'Serverless Computing', 'Security', 'Storage', 'Networking', 'Monitoring', 'Cloud Fundamentals'],
       color: 'from-orange-500 to-red-500'
     },
     {
       position: 'AI/ML Development Intern',
       company: 'Next24Tech, Jaipur',
       duration: '2 Months',
-      date: 'Apr-May 2024',
+      date: 'August 20 - October 20, 2024',
+      summary: 'Built intelligent systems using OpenCV, CNN, and real-time communication APIs.',
+      fullDescription: 'Developed AI/ML projects using OpenCV for computer vision, CNN for deep learning, and Twilio for real-time communication. Focused on image processing, pattern recognition, and real-time alert systems. Created intelligent applications that could process visual data and provide automated responses.',
+      keyLearnings: ['Computer Vision', 'Deep Learning', 'Real-time Systems', 'API Integration'],
+      color: 'from-purple-500 to-pink-500'
+    },
+    {
+      position: 'Azure-Devops Intern',
+      company: 'Celebal Technologies, Jaipur',
+      duration: '2 Months',
+      date: 'May 19 - July 20, 2025',
+      summary: 'I was responsible for managing cloud infrastructure, containerized applications, and CI/CD pipelines using Azure, Docker, Kubernetes, and Azure DevOps tools.',
+      keyLearnings: ['Azure DevOps', 'Azure', 'Docker', 'Kubernetes', 'CI/CD pipeline'],
+      color: 'from-purple-500 to-pink-500'
+    },
+    {
+      position: 'AI/ML Development Intern',
+      company: 'Next24Tech, Jaipur',
+      duration: '2 Months',
+      date: 'August 20 - October 20, 2024',
       summary: 'Built intelligent systems using OpenCV, CNN, and real-time communication APIs.',
       fullDescription: 'Developed AI/ML projects using OpenCV for computer vision, CNN for deep learning, and Twilio for real-time communication. Focused on image processing, pattern recognition, and real-time alert systems. Created intelligent applications that could process visual data and provide automated responses.',
       keyLearnings: ['Computer Vision', 'Deep Learning', 'Real-time Systems', 'API Integration'],

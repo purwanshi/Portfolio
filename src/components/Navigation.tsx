@@ -1,20 +1,35 @@
 import React, { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Menu, X, Home, Zap, Code, Calendar, FolderOpen, Award, Mail } from 'lucide-react';
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
 
   const navigationItems = [
-    { path: '/', name: 'Home', icon: Home },
-    { path: '/superpowers', name: 'Superpowers', icon: Zap },
-    { path: '/tech-arsenal', name: 'Tech Arsenal', icon: Code },
-    { path: '/internships', name: 'Internship Calendar', icon: Calendar },
-    { path: '/projects', name: 'Projects', icon: FolderOpen },
-    { path: '/achievements', name: 'Achievements', icon: Award },
-    { path: '/contact', name: 'Contact', icon: Mail },
+    { path: '/', anchor: 'landing', name: 'Home', icon: Home },
+    { path: '/superpowers', anchor: 'superpowers', name: 'Superpowers', icon: Zap },
+    { path: '/tech-arsenal', anchor: 'tech-arsenal', name: 'Tech Arsenal', icon: Code },
+    { path: '/internships', anchor: 'internships', name: 'Internship Calendar', icon: Calendar },
+    { path: '/projects', anchor: 'projects', name: 'Projects', icon: FolderOpen },
+    { path: '/achievements', anchor: 'achievements', name: 'Achievements', icon: Award },
+    { path: '/contact', anchor: 'contact', name: 'Contact', icon: Mail },
   ];
+
+  const handleNavClick = (item) => {
+    if (location.pathname === '/') {
+      // On main page, scroll to section
+      const section = document.getElementById(item.anchor);
+      if (section) {
+        section.scrollIntoView({ behavior: 'smooth' });
+      }
+    } else {
+      // Navigate to standalone page
+      navigate(item.path);
+    }
+    setIsOpen(false);
+  };
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-gray-900/95 backdrop-blur-sm border-b border-red-500/20">
@@ -32,18 +47,20 @@ const Navigation = () => {
               {navigationItems.map((item) => {
                 const Icon = item.icon;
                 return (
-                  <Link
+                  <button
                     key={item.path}
-                    to={item.path}
+                    onClick={() => handleNavClick(item)}
                     className={`px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 flex items-center space-x-1 ${
-                      location.pathname === item.path
+                      (location.pathname === '/' && item.anchor === 'landing') ||
+                      (location.pathname !== '/' && location.pathname === item.path)
                         ? 'bg-red-600 text-white glow-border'
                         : 'text-gray-300 hover:bg-red-700 hover:text-white'
                     }`}
+                    style={{ background: 'none', border: 'none', cursor: 'pointer' }}
                   >
                     <Icon size={16} />
                     <span>{item.name}</span>
-                  </Link>
+                  </button>
                 );
               })}
             </div>
@@ -68,19 +85,20 @@ const Navigation = () => {
             {navigationItems.map((item) => {
               const Icon = item.icon;
               return (
-                <Link
+                <button
                   key={item.path}
-                  to={item.path}
+                  onClick={() => handleNavClick(item)}
                   className={`block px-3 py-2 rounded-md text-base font-medium transition-all duration-300 flex items-center space-x-2 ${
-                    location.pathname === item.path
+                    (location.pathname === '/' && item.anchor === 'landing') ||
+                    (location.pathname !== '/' && location.pathname === item.path)
                       ? 'bg-red-600 text-white'
                       : 'text-gray-300 hover:bg-red-700 hover:text-white'
                   }`}
-                  onClick={() => setIsOpen(false)}
+                  style={{ background: 'none', border: 'none', cursor: 'pointer', width: '100%', textAlign: 'left' }}
                 >
                   <Icon size={18} />
                   <span>{item.name}</span>
-                </Link>
+                </button>
               );
             })}
           </div>

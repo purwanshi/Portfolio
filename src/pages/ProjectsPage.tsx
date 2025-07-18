@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Cloud, Brain, Server, Code } from 'lucide-react';
+import { Cloud, Brain, Server, Code, Bot, ExternalLink } from 'lucide-react';
 import TypingEffect from '../components/TypingEffect';
 
 const ProjectsPage = () => {
@@ -15,7 +15,8 @@ const ProjectsPage = () => {
     { name: 'Cloud Projects', icon: Cloud, color: 'from-blue-500 to-cyan-500' },
     { name: 'Machine Learning Projects', icon: Brain, color: 'from-purple-500 to-pink-500' },
     { name: 'DevOps Projects', icon: Server, color: 'from-green-500 to-teal-500' },
-    { name: 'Python Projects', icon: Code, color: 'from-orange-500 to-red-500' }
+    { name: 'Python Projects', icon: Code, color: 'from-orange-500 to-red-500' },
+    { name: 'LLM & AI Automation', icon: Bot, color: 'from-indigo-500 to-purple-500' }
   ];
 
   const projects = {
@@ -27,7 +28,8 @@ const ProjectsPage = () => {
         problem: 'Duplicate files in S3 buckets waste storage space and increase costs',
         howItWorks: 'Lambda functions scan S3 buckets, identify duplicates using hash comparison, and automatically remove redundant files while sending SNS notifications',
         techStack: ['AWS Lambda', 'S3', 'SNS', 'Python', 'CloudWatch'],
-        image: 'https://images.pexels.com/photos/1181677/pexels-photo-1181677.jpeg?auto=compress&cs=tinysrgb&w=300'
+        image: 'https://imgs.search.brave.com/Lk2QIo8f24M3e5wNN0E-srBAnsnc2HAHbO9j3t9GOJM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9wcmV2/ZW50ZGlyZWN0YWNj/ZXNzLmNvbS93cC1j/b250ZW50L3VwbG9h/ZHMvMjAxOC8wNS9w/ZGEtczMtc3F1YXJl/LTI1Ni1sb2dvLTE1/MHgxNTAucG5n',
+        githubUrl: 'https://github.com/yourusername/s3-deduplication-system'
       }
     ],
     'Machine Learning Projects': [
@@ -38,7 +40,8 @@ const ProjectsPage = () => {
         problem: 'Real-time lane detection is crucial for autonomous driving systems',
         howItWorks: 'Uses OpenCV for image processing and Hough Transform algorithm to detect lane lines in real-time video feeds',
         techStack: ['OpenCV', 'Python', 'Hough Transform', 'Computer Vision'],
-        image: 'https://images.pexels.com/photos/1519088/pexels-photo-1519088.jpeg?auto=compress&cs=tinysrgb&w=300'
+        image: 'https://imgs.search.brave.com/KOIFzrl_LXedkezWA7WIKoIx8qn8iQK1yMrw8a0xU9c/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9naXRo/dWIuY29tL09hbmFH/YXNrZXkvTGFuZS1M/aW5lcy1EZXRlY3Rp/b24vcmF3L21hc3Rl/ci90ZXN0X2ltYWdl/c19vdXRwdXQvNy5K/UEc',
+        githubUrl: 'https://github.com/yourusername/lane-detection-system'
       },
       {
         id: 3,
@@ -47,7 +50,8 @@ const ProjectsPage = () => {
         problem: 'Late detection of plant diseases leads to significant crop losses',
         howItWorks: 'CNN model trained on plant leaf images classifies diseases with high accuracy, enabling early intervention',
         techStack: ['TensorFlow', 'CNN', 'Python', 'Image Processing'],
-        image: 'https://images.pexels.com/photos/1112080/pexels-photo-1112080.jpeg?auto=compress&cs=tinysrgb&w=300'
+        image: 'https://imgs.search.brave.com/8mYiQw6XOTS7-_1DTrx2nvvaMyRnK-qQTkr7a9es3Ho/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90aHVt/YnMuZHJlYW1zdGlt/ZS5jb20vYi9wbGFu/dC12aXRyby1kb2N0/b3ItbGFib3JhdG9y/eS1zZWxlY3RpdmUt/Zm9jdXMtd2hpdGUt/MzA0ODQwNDM1Lmpw/Zw',
+        githubUrl: 'https://github.com/yourusername/plant-disease-prediction'
       },
       {
         id: 4,
@@ -56,16 +60,8 @@ const ProjectsPage = () => {
         problem: 'Traditional emergency systems require physical interaction which may not be possible in crisis situations',
         howItWorks: 'AI-powered system recognizes hand gestures: open hand triggers alarm with location, index finger sends SMS via Twilio, call gesture initiates emergency calls',
         techStack: ['OpenCV', 'MediaPipe', 'Twilio', 'Python', 'AI/ML'],
-        image: 'https://images.pexels.com/photos/1118873/pexels-photo-1118873.jpeg?auto=compress&cs=tinysrgb&w=300'
-      },
-      {
-        id: 5,
-        title: 'Cozy Therapist',
-        purpose: 'Provide personalized mental health support and mood enhancement',
-        problem: 'Limited access to mental health resources and personalized therapy',
-        howItWorks: 'AI chatbot built with Gradio provides mood-boosting suggestions with 55% uplift in 5-minute sessions through personalized recommendations',
-        techStack: ['Gradio', 'Python', 'NLP', 'AI/ML'],
-        image: 'https://images.pexels.com/photos/3785079/pexels-photo-3785079.jpeg?auto=compress&cs=tinysrgb&w=300'
+        image: 'https://imgs.search.brave.com/DY4nSLov7i8aiFvyllnGY3FJHOaahhYO02cWT71gC5E/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/bmNiaS5ubG0ubmlo/Lmdvdi9wbWMvYmxv/YnMvNzA1Mi85MjI0/ODU3LzE2YTdmNDUy/MzJhOC9qaW1hZ2lu/Zy0wOC0wMDE1My1n/MDA1LmpwZw',
+        githubUrl: 'https://github.com/yourusername/gesture-alert-system'
       },
       {
         id: 6,
@@ -74,7 +70,8 @@ const ProjectsPage = () => {
         problem: 'Difficulty in accurately estimating calories burned during different activities',
         howItWorks: 'Streamlit app uses ML model to predict calories burned based on exercise type, duration, and user parameters',
         techStack: ['Streamlit', 'Python', 'Machine Learning', 'Pandas'],
-        image: 'https://images.pexels.com/photos/1181316/pexels-photo-1181316.jpeg?auto=compress&cs=tinysrgb&w=300'
+        image: 'https://imgs.search.brave.com/wb2Wx_8Z1p1SfVE1YyILK4V9jyqZZZs1JUbc2wVdvOA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90My5m/dGNkbi5uZXQvanBn/LzA1Lzc0LzY0LzMy/LzM2MF9GXzU3NDY0/MzI2Nl82OFRuRXEz/TnFKeFBhTWp1ZUZV/VThmRmpSVzBOSzlO/WS5qcGc',
+        githubUrl: 'https://github.com/yourusername/calorie-prediction-app'
       }
     ],
     'DevOps Projects': [
@@ -85,16 +82,18 @@ const ProjectsPage = () => {
         problem: 'Manual deployment processes are error-prone and time-consuming',
         howItWorks: 'Complete pipeline with Jenkins for CI/CD, Docker containerization, Nginx reverse proxy, and SystemD service management with automated testing',
         techStack: ['Flask', 'Jenkins', 'Docker', 'Nginx', 'SystemD'],
-        image: 'https://images.pexels.com/photos/1181677/pexels-photo-1181677.jpeg?auto=compress&cs=tinysrgb&w=300'
+        image: 'https://imgs.search.brave.com/bbpmViDws_Itur5nDMCcG2JOShd7aqxNp9yQsuk7eeg/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/YmxhY2tkdWNrLmNv/bS9nbG9zc2FyeS93/aGF0LWlzLWNpY2Qv/X2pjcl9jb250ZW50/L3Jvb3Qvc3lub3Bz/eXNjb250YWluZXIv/Y29sdW1uXzE5NDYz/OTU0NTJfY28vY29s/UmlnaHQvaW1hZ2Vf/Y29weS5jb3JlaW1n/LnN2Zy8xNzI3MTk5/Mzc3MTk1L2NpY2Qu/c3Zn',
+        githubUrl: 'https://github.com/yourusername/flask-deployment-pipeline'
       },
       {
         id: 8,
         title: 'GEN-AI-OPS',
         purpose: 'Revolutionize CI/CD with AI-generated code deployment',
         problem: 'Traditional CI/CD pipelines require manual code updates and deployment',
-        howItWorks: 'Uses Generative AI to automatically generate Flask code, builds every 5 minutes via Poll SCM pulling latest code from GitHub with automated deployment',
+        howItWorks: 'Uses Generative AI to automatically generate Flask code, Autobuilds after every 5 minutes via Poll SCM ,triggers by pulling latest code from GitHub and  automate deployment',
         techStack: ['Generative AI', 'Jenkins', 'Flask', 'GitHub', 'Python'],
-        image: 'https://images.pexels.com/photos/1519088/pexels-photo-1519088.jpeg?auto=compress&cs=tinysrgb&w=300'
+        image: 'https://imgs.search.brave.com/wb2Wx_8Z1p1SfVE1YyILK4V9jyqZZZs1JUbc2wVdvOA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90My5m/dGNkbi5uZXQvanBn/LzA1Lzc0LzY0LzMy/LzM2MF9GXzU3NDY0/MzI2Nl82OFRuRXEz/TnFKeFBhTWp1ZUZV/VThmRmpSVzBOSzlO/WS5qcGc',
+        githubUrl: 'https://github.com/yourusername/gen-ai-ops'
       }
     ],
     'Python Projects': [
@@ -105,12 +104,29 @@ const ProjectsPage = () => {
         problem: 'Manual management of multiple social platforms is time-consuming',
         howItWorks: 'Python automation scripts handle WhatsApp messaging, email management, Instagram bot interactions, and Twitter bot operations seamlessly',
         techStack: ['Python', 'WhatsApp API', 'Email APIs', 'Instagram API', 'Twitter API'],
-        image: 'https://images.pexels.com/photos/1112080/pexels-photo-1112080.jpeg?auto=compress&cs=tinysrgb&w=300'
+        image: 'https://imgs.search.brave.com/mx3rOAbuE9hvvHmA5QAo395p4cLKCjOtFnsw8bShEOI/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/ZnJlZS12ZWN0b3Iv/cG9wdWxhci1zb2Np/YWwtbWVkaWEtY2ly/Y3VsYXItbG9nby1j/b2xsZWN0aW9uXzEz/NjEtMzQ5LmpwZz9z/ZW10PWFpc19oeWJy/aWQmdz03NDA',
+        githubUrl: 'https://github.com/yourusername/syncfury'
+      }
+    ],
+    'LLM & AI Automation': [
+      {
+        id: 5,
+        title: 'Cozy Therapist',
+        purpose: 'Provide personalized mental health support and mood enhancement',
+        problem: 'Limited access to mental health resources and personalized therapy',
+        howItWorks: 'AI chatbot built with Gradio provides mood-boosting suggestions with 55% uplift in 5-minute sessions through personalized recommendations',
+        techStack: ['Gradio', 'Python', 'NLP', 'AI'],
+        image: 'https://imgs.search.brave.com/Js8NHPHWKKY_ZzSXq7_tPStuDFWwUh0wpaX5h3D_6w8/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/ZnJlZS1waG90by9t/aWQtc2hvdC13b21h/bi10aGVyYXBpc3Qt/d2l0aC1jbGlwYm9h/cmRfMjMtMjE0ODc1/OTExMy5qcGc_c2Vt/dD1haXNfaHlicmlk/Jnc9NzQw',
+        githubUrl: 'https://github.com/yourusername/cozy-therapist'
       }
     ]
   };
 
   const headerText = "HERE IS THE SASS — LET'S CHECK OUT SOME PROJECTS!";
+
+  const handleViewCode = (url: string) => {
+    window.open(url, '_blank');
+  };
 
   return (
     <div className="min-h-screen pt-16 relative overflow-hidden" style={{ background: '#222831' }}>
@@ -192,7 +208,7 @@ const ProjectsPage = () => {
                       </div>
                       
                       {/* Tech Stack */}
-                      <div>
+                      <div className="mb-6">
                         <h4 className="text-sm font-semibold mb-2" style={{ color: '#F05454' }}>Tech Stack:</h4>
                         <div className="flex flex-wrap gap-2">
                           {project.techStack.map((tech, techIndex) => (
@@ -206,6 +222,19 @@ const ProjectsPage = () => {
                           ))}
                         </div>
                       </div>
+
+                      {/* View Code Button */}
+                      {project.githubUrl && (
+                        <button
+                          onClick={() => handleViewCode(project.githubUrl!)}
+                          className="flex items-center space-x-2 px-4 py-2 rounded-lg transition-all duration-300 hover:scale-105"
+                          style={{ background: '#F05454', color: '#DDDDDD' }}
+                        >
+                          <Code size={16} />
+                          <span>View Code</span>
+                          <ExternalLink size={16} />
+                        </button>
+                      )}
                     </div>
                   </div>
                 </div>
