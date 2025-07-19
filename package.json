@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "name": "portfolio",
   "private": true,
   "version": "0.0.0",
@@ -7,6 +8,11 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+=======
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+>>>>>>> ce8a56d8ec446096febf5df4233068abae0d0367
     "preview": "vite preview"
   },
   "dependencies": {
@@ -15,6 +21,7 @@
     "react-router-dom": "^6.8.1",
     "html2canvas": "^1.4.1",
     "jspdf": "^3.0.1",
+<<<<<<< HEAD
     "lucide-react": "^0.263.1"
   },
   "devDependencies": {
@@ -31,5 +38,16 @@
     "tailwindcss": "^3.3.6",
     "typescript": "^5.2.2",
     "vite": "^5.0.8"
+=======
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "vite": "^5.0.0",
+    "@vitejs/plugin-react": "^4.0.0",
+    "tailwindcss": "^3.4.1",
+    "postcss": "^8.4.38",
+    "autoprefixer": "^10.4.19"
+>>>>>>> ce8a56d8ec446096febf5df4233068abae0d0367
   }
 }
